@@ -31,7 +31,7 @@ function playRound(playerSelection,computerSelection){
 function game(){
     let wins=0;
     let losses=0;
-    let ties=0.
+    let ties=0;
     for (let i=0; i<5;i++){
         var selection;
         do{
@@ -69,5 +69,6 @@ function game(){
         return "It's a tie!"
     }
 }
-alert(game());
-console.log(game());
+let result = game();
+alert(result);
+console.log(result);
