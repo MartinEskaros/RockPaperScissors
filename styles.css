@@ -1,0 +1,104 @@
+.row-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 200px;
+
+}
+
+.vert-container{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    
+}
+h1{
+    font-size: 140px;
+    font-weight: 400;
+    color: rgb(169, 121, 43);
+    text-align: center;
+}
+h2{
+    text-align: center;
+    font-size: 90px;
+
+}
+p{
+    font-size: 140px;
+    font-weight: 400;
+    color: rgb(169, 121, 43);
+    text-align: center;
+}
+
+
+.button {
+    
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: rgb(169, 121, 43);
+
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 34px;
+    transition: all .3s;
+    width: 200px;
+    height: 100px;
+  }
+
+  .rock {
+    display: flex;        
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center; 
+}
+
+.paper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.paper img{
+    display: block;
+    margin-bottom: 40px;
+    height: 200px;
+}
+
+.rock img {
+    display: block;
+    margin-bottom: 40px;  /* Space between the image and its associated button */
+ 
+    height: 200px; /* Adjust as needed */
+}
+
+.scissors{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.scissors img {
+    display: flex;
+    margin-bottom: 40px;
+    height: 200px;
+}
+
+.button:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+  
+
+ 
+  
+ 
+  .button:hover {
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  
