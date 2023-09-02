@@ -28,46 +28,39 @@ function playRound(playerSelection,computerSelection){
         }
     } 
 }
-function game(){
-    let wins=0;
-    let losses=0;
-    let ties=0.
-    for (let i=0; i<5;i++){
-        var selection;
-        do{
-            selection = prompt("Enter choice");
-            if(selection !=="rock" && selection !=="paper" && selection !=="scissors"){
-                alert("Input is incorrect");
-            }
-        }while (selection !=="rock" && selection !=="paper" && selection !=="scissors")
 
+const buttons = document.querySelectorAll('button');        //go through all the buttons and add event listeners to the
+buttons.forEach((button) =>{
+    button.addEventListener('click', function(){
+        playGame(button.id);
+    });
+});
 
-        let result = playRound(selection,getComputerChoice())
+function playGame(playerChoice){
+
+let computerChoice = getComputerChoice();
+let result=playRound(playerChoice,computerChoice);
+
+const resultDisplay = document.getElementById('result');
+
+switch(result){
+    case 0:
+        resultDisplay.textContent ="You Tied"; 
+        resultDisplay.style.color='grey'     
+        break;
         
-        if (result === 1){
-            wins++;
-            alert("win");
-            console.log("Win");
-            
-        }
-        else if (result === 2){
-            losses++   
-            alert("Loss");
-            console.log("Loss");
-        }else{
-            ties++;
-            alert("Tie");
-            console.log("Tie")
-        }
-        
-    }
-    if(wins>losses){
-        return "You Won! The score is "+wins+" - "+losses;
-    } else if(wins<losses){
-        return "You Lost! The score is "+wins+" - "+losses;
-    }else{
-        return "It's a tie!"
-    }
+    case 1:
+        resultDisplay.textContent ="You Won"; 
+        resultDisplay.style.color='green' 
+        break;
+    case 2:
+        resultDisplay.textContent ="You Lost";  
+        resultDisplay.style.color='red'
+        break;
 }
-alert(game());
-console.log(game());
+
+}
+
+
+
+
